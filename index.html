@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+    <div class="buttonclass">
+    <button id="rock" onclick="playRound(this.id)" class="pick">Rock</button>
+    <button id="paper" onclick="playRound(this.id)" class="pick">Paper</button>
+    <button id="scissor" onclick="playRound(this.id)" class="pick">Scissor</button>
+    <button id="new_game" onclick="newgame()">New Game</button>
+    </div>
+    <div class="labelclass">
+    <label id="cscorelbl">Computer Score:</label>
+    <label id="lblcscore">0</label>
+    <label id="yscorelbl">Your Score:</label>
+    <label id="lblyscore">0</label>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
