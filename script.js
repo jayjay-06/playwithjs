@@ -13,58 +13,50 @@ function playRound(playerSelection, computerSelection) {
     computerSelection=getComputerChoice(items);
     playerSelect=playerSelection;
 if(yourscore===5){
-    console.log("congratulatioins! you won");
+
    alert("congratulatioins! you won \n press new game");
 }
 else if(compscore===5){
-    console.log("better luck next time, computers won");
-    alert("better luck next time, computers won");
+    alert("better luck next time, computers won  \n press new game");
 }
 else {
     if(playerSelect==="rock"){
         if(computerSelection=="paper"){
-            console.log("1 point for commputer");
+            document.getElementById("notif").innerText="1 point for commputer"
             compscore++;
-            console.log(compscore);
         }
         else if (computerSelection=="rock"){
-            console.log("its a tie, no point each");
+            document.getElementById("notif").innerText="its a tie, no point each"
         }
         else if (computerSelection=="scissor"){
-            console.log("1 point for you");
-            
+            document.getElementById("notif").innerText="1 point for you"
             yourscore++;
-            console.log(yourscore);
         }
     }
    else if(playerSelect=="paper"){
         if(computerSelection=="paper"){
-            console.log("its a tie, no point each");
+            document.getElementById("notif").innerText="its a tie, no point each"
         }
         else if (computerSelection=="rock"){
-            console.log("1 point for you");
+            document.getElementById("notif").innerText="1 point for you"
             yourscore++;
-            console.log(yourscore);
         }
         else if (computerSelection=="scissor"){
-            console.log("1 point for computer");
+            document.getElementById("notif").innerText="1 point for commputer"
             compscore++;
-            console.log(compscore);
         }
     }
     if(playerSelect=="scissor"){
         if(computerSelection=="paper"){
-            console.log("1 point for you");
+            document.getElementById("notif").innerText="1 point for you"
             yourscore++;
-            console.log(yourscore);
         }
         else if (computerSelection=="rock"){
-            console.log("1 point for computer");
+            document.getElementById("notif").innerText="1 point for commputer"
             compscore++;
-            console.log(compscore);
         }
         else if (computerSelection=="scissor"){
-            console.log("its a tie, no point each");
+            document.getElementById("notif").innerText="its a tie, no point each"
         }
     }
 
@@ -79,7 +71,6 @@ function newgame() {
   
     yourscore=0;
     compscore=0;
-    console.clear();
     score();
     
 }
