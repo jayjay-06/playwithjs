@@ -8,6 +8,12 @@ function getComputerChoice(items) {
    return items[Math.floor(Math.random()*items.length)];
 }
 
+
+const labelclass = document.querySelector('.labelclass');
+const notif = document.createElement('label');
+notif.classList.add('notif');
+labelclass.appendChild(notif);
+
 function playRound(playerSelection, computerSelection) {
     score();
     computerSelection=getComputerChoice(items);
@@ -22,41 +28,41 @@ else if(compscore===5){
 else {
     if(playerSelect==="rock"){
         if(computerSelection=="paper"){
-            document.getElementById("notif").innerText="1 point for commputer"
+            notif.textContent="1 point for commputer";
             compscore++;
         }
         else if (computerSelection=="rock"){
-            document.getElementById("notif").innerText="its a tie, no point each"
+            notif.textContent="its a tie, no point each"
         }
         else if (computerSelection=="scissor"){
-            document.getElementById("notif").innerText="1 point for you"
+            notif.textContent="1 point for you"
             yourscore++;
         }
     }
    else if(playerSelect=="paper"){
         if(computerSelection=="paper"){
-            document.getElementById("notif").innerText="its a tie, no point each"
+            notif.textContent="its a tie, no point each"
         }
         else if (computerSelection=="rock"){
-            document.getElementById("notif").innerText="1 point for you"
+            notif.textContent="1 point for you"
             yourscore++;
         }
         else if (computerSelection=="scissor"){
-            document.getElementById("notif").innerText="1 point for commputer"
+            notif.textContent="1 point for commputer"
             compscore++;
         }
     }
     if(playerSelect=="scissor"){
         if(computerSelection=="paper"){
-            document.getElementById("notif").innerText="1 point for you"
+            notif.textContent="1 point for you"
             yourscore++;
         }
         else if (computerSelection=="rock"){
-            document.getElementById("notif").innerText="1 point for commputer"
+            notif.textContent="1 point for commputer"
             compscore++;
         }
         else if (computerSelection=="scissor"){
-            document.getElementById("notif").innerText="its a tie, no point each"
+            notif.textContent="its a tie, no point each"
         }
     }
 
